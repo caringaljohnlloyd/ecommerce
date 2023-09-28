@@ -1,4 +1,8 @@
-<header class="header">
+<body>
+
+
+    <!-- Header Section Begin -->
+    <header class="header">
         <div class="header__top">
             <div class="container">
                 <div class="row">
@@ -10,7 +14,7 @@
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
-                       
+                        
                                 <a href="#">FAQs</a>
                             </div>
                             <div class="header__top__hover">
@@ -30,26 +34,25 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="header__logo">
-                        <a href="<?=base_url('/')?>"><img src="<?=base_url('img/logo.png')?>" alt=""></a>
+                        <a href="/"><img src="img/logo.png" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                        <li class="active"><a href="/">Home</a></li>
-                            <li><a href="/shop">Shop</a></li>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/">Shop</a></li>
                             <li><a href="/about">About Us</a></li>
-                            <li><a href="/blog">Blog</a></li>
+                            <li class="active"><a href="/blog">Blog</a></li>
                             <li><a href="/contact">Contacts</a></li>
                         </ul>
-                            
                     </nav>
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
-                        <a href="#" class="search-switch"><img src="<?=base_url('')?>img/icon/search.png" alt=""></a>
-                        <a href="#"><img src=" <?=base_url('img/icon/heart.png')?>" alt=""></a>
-                        <a href="#"><img src="<?=base_url('img/icon/cart.png')?>" alt=""> <span>0</span></a>
+                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                        <a href="#"><img src="img/icon/heart.png" alt=""></a>
+                        <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
                         <div class="price">$0.00</div>
                     </div>
                 </div>
@@ -57,7 +60,4 @@
             <div class="canvas__open"><i class="fa fa-bars"></i></div>
         </div>
     </header>
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
-    
+    <!-- Header Section End -->

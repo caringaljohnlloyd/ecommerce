@@ -140,13 +140,12 @@
     <?php foreach ($products as $product): ?>
         <div class="col-lg-4 col-md-6 col-sm-6">
             <div class="product__item">
-            <div class="product__item__pic set-bg" data-setbg="<?= base_url($product['Image']) ?>">                    <!-- Other product details -->
+            <div class="product__item__pic set-bg" data-setbg="<?= base_url($product['Image']) ?>">                    
                     <h6><?= $product['ProductName'] ?></h6>
                     <p><?= $product['ProductDescription'] ?></p>
                     <p>Category: <?= $product['ProductCategory'] ?></p>
                     <p>Quantity: <?= $product['ProductQuantity'] ?></p>
                     <h5>$<?= $product['ProductPrice'] ?></h5>
-
                 </div>                              
             </div>
         </div>

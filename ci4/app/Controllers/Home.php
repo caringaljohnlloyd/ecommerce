@@ -28,7 +28,6 @@ class Home extends BaseController
     public function contact(){
         return view('forcontact');
     }
-
     public function register(){
         helper(['form']);
         $rules=[

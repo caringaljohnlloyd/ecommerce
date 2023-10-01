@@ -18,7 +18,6 @@ $routes->get('/about', 'Home::about');
 $routes->get('/blog', 'Home::blog');
 $routes->get('/contact', 'Home::contact');
 
-$routes->get('/admin', 'AdminController::admin');
 $routes->get('/sidebar', 'AdminController::admin');
 $routes->get('/adminchart/chart', 'AdminController::adminch');
 $routes->get('/admintable/table', 'AdminController::admintab');

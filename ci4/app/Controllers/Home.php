@@ -55,34 +55,31 @@ class Home extends BaseController
             helper(['form']);
             echo view('signin');
         }
-        public function LoginAuth()
-        {
+        public function LoginAuth(){
             $session = session();
-            $userModel = new UserModel();
-            $username = $this->request->getVar('username');
+            $userModel = new UserModel(); $username = $this->request->getVar('username');
             $password = $this->request->getVar('password');
-        
+            
             $data = $userModel->where('username', $username)->first();
-        
-            if ($data) {
-                $pass = $data['password'];
-                $authenticatePassword = password_verify($password, $pass);
-                if ($authenticatePassword) {
-                    $ses_data = [
-                        'ID' => $data['ID'],
-                        'username' => $data['username'],
-                        'isLoggedin' => TRUE
-                    ];
-                    $session->set($ses_data);
-                    return redirect()->to('/user');
-                } else {
-                    $session->setFlashdata('msg', 'Password is incorrect.');
-                    return redirect()->to('/signin'); 
-                }
-            } else {
-                $session->setFlashdata('msg', 'Username does not exist.'); 
-                return redirect()->to('/signin'); 
+            
+            if($data){
+            $pass = $data['password'];
+            $authenticatePassword = password_verify($password, $pass);
+            if($authenticatePassword){
+            $ses_data = [
+            'ID' => $data['ID'],
+            'username' => $data['username'],
+            'isLoggedin' => TRUE
+            ];
+            $session->set($ses_data); 
+            return redirect()->to('/user');
+            }else{
+            $session->setFlashdata('msg', 'Password is incorrect.'); 
+            return redirect()->to('/signin');
+            } 
+            }else{
+            $session->setFlashdata('msg', 'Email does not exist.');
+            return redirect()->to('/signin');
             }
-        }
-        
+    }
 }

@@ -43,17 +43,24 @@ class Home extends BaseController
                     'password'=> password_hash($this->request->getVar('password'),PASSWORD_DEFAULT)
                 ];
                 $userModel->save($data);
-                return redirect()->to('/signin');
+                return redirect()->to('/login');
             }
             else{
                 $data['validation']= $this->validator;
                 echo view('signup', $data);
             }
         }
-        public function Login(){
+        public function login(){
             helper(['form']);
             echo view('signin');
         }
+         public function logout()
+         {
+             $session = session();
+             $session->destroy();
+             return redirect()->to(base_url('/login'));
+         }
+        
         public function LoginAuth(){
             $session = session();
             $userModel = new UserModel(); $username = $this->request->getVar('username');
@@ -71,14 +78,14 @@ class Home extends BaseController
             'isLoggedin' => TRUE
             ];
             $session->set($ses_data); 
-            return redirect()->to('/user');
+            return redirect()->to('/sidebar');
             }else{
             $session->setFlashdata('msg', 'Password is incorrect.'); 
-            return redirect()->to('/signin');
+            return redirect()->to('/login');
             } 
             }else{
             $session->setFlashdata('msg', 'Email does not exist.');
-            return redirect()->to('/signin');
+            return redirect()->to('/login');
             }
     }
 }

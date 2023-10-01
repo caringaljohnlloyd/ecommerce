@@ -26,8 +26,8 @@ $routes->get('/admintable/table', 'AdminController::admintab',['filter'=>'authGu
 $routes->get('/admininventory/inventory', 'AdminController::inventory',['filter'=>'authGuard']);
 
 $routes->post('/admininventory/add', 'AdminController::add',['filter'=>'authGuard']);
-$routes->post('/admininventory/update/(:num)', 'AdminController::edit/$1');
-$routes->get('/admininventory/delete/(:num)', 'AdminController::delete/$1');
+$routes->post('/admininventory/update/(:num)', 'AdminController::edit/$1',['filter'=>'authGuard']);
+$routes->get('/admininventory/delete/(:num)', 'AdminController::delete/$1',['filter'=>'authGuard']);
 
 
 

@@ -8,7 +8,7 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 
 $routes->match(['get', 'post'], '/signup', 'Home::register');
-$routes->post('/signin', 'UserController::LoginAuth');
+$routes->post('/signin', 'Home::LoginAuth');
 
 
 $routes->get('/user', 'Home::home',['filter'=>'authGuard']);
@@ -28,7 +28,7 @@ $routes->get('/admininventory/inventory', 'AdminController::inventory',['filter'
 $routes->post('/admininventory/add', 'AdminController::add',['filter'=>'authGuard']);
 $routes->post('/admininventory/update/(:num)', 'AdminController::edit/$1',['filter'=>'authGuard']);
 $routes->get('/admininventory/delete/(:num)', 'AdminController::delete/$1',['filter'=>'authGuard']);
-
+$routes->get('/login', 'Home::login');
 
 
 

@@ -6,6 +6,12 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 $routes->get('/', 'Home::index');
+
+$routes->match(['get', 'post'], '/signup', 'Home::register');
+$routes->match(['get', 'post'], '/signin', 'Home::LoginAuth');
+
+$routes->get('/user', 'Home::home');
+
 $routes->get('/shop', 'Home::shop');
 $routes->get('/about', 'Home::about');
 $routes->get('/blog', 'Home::blog');
@@ -23,13 +29,9 @@ $routes->post('/admininventory/add', 'AdminController::add');
 $routes->post('/admininventory/update/(:num)', 'AdminController::edit/$1');
 $routes->get('/admininventory/delete/(:num)', 'AdminController::delete/$1');
 
+['filter'=>'authGuard'];
 
 
-$routes->get('register', 'Home::register');
-$routes->post('register', 'Home::doRegister');
-
-$routes->get('login', 'Home::login');
-$routes->post('login', 'Home::doLogin');
 
 
 

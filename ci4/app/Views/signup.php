@@ -14,8 +14,9 @@
                         <div class="alert alert-warning"> <?= $validation->listErrors() ?>
                     </div>
                     <?php endif; ?>
-                    <form action="<?php echo base_url(); ?>/signin" method="post"> <div class="form-group mb-3">
-                        <input type="text" name="name" placeholder="Name" value="<?= old('name') ?>" class="form-control">
+                    <form action="<?php echo base_url(); ?>signup" method="post"> <div class="form-group mb-3">
+                    <div class="form-group mb-3">
+                        <input type="text" name="username" placeholder="Name" value="<?= old('username') ?>" class="form-control">
                     </div>
                     <div class="form-group mb-3">
                         <input type="email" name="email" placeholder="Email" value="<?= old('email') ?>" class="form-control">
@@ -28,6 +29,9 @@
                     </div>
                     <div class="d-grid">
                         <button type="submit" class="btn btn-dark">Signup</button>
+                    </div>
+                    <div class="mb-3">
+                        Already have an account? <a href="<?= base_url('signin') ?>">Signin</a>
                     </div>
                 </form>
             </div>

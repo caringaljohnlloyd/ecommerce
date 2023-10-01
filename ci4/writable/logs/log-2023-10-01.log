@@ -125,3 +125,297 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
 10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
 11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+CRITICAL - 2023-10-01 09:55:28 --> "min_lenght" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 317.
+ 1 SYSTEMPATH\Validation\Validation.php(317): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('min_lenght')
+ 2 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'john', [...], [...])
+ 3 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Home.php(38): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->register()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+CRITICAL - 2023-10-01 09:56:25 --> "min_lenght" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 317.
+ 1 SYSTEMPATH\Validation\Validation.php(317): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('min_lenght')
+ 2 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('username', 'username', 'johnlloyd', [...], [...])
+ 3 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Home.php(38): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->register()
+ 6 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+ERROR - 2023-10-01 10:48:58 --> mysqli_sql_exception: Table 'product.user' doesn't exist in C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ecommerce\ci4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ecommerce\ci4\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail...', Array, Array)
+#7 C:\laragon\www\ecommerce\ci4\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ecommerce\ci4\app\Controllers\Home.php(40): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(919): App\Controllers\Home->register()
+#10 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ecommerce\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ecommerce\ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 10:48:58 --> Table 'product.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\Home.php(40): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+ERROR - 2023-10-01 10:50:30 --> mysqli_sql_exception: Table 'product.user' doesn't exist in C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ecommerce\ci4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ecommerce\ci4\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail...', Array, Array)
+#7 C:\laragon\www\ecommerce\ci4\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ecommerce\ci4\app\Controllers\Home.php(40): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(919): App\Controllers\Home->register()
+#10 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ecommerce\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ecommerce\ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 10:50:30 --> Table 'product.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\Home.php(40): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+ERROR - 2023-10-01 10:56:39 --> mysqli_sql_exception: Table 'product.user' doesn't exist in C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ecommerce\ci4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ecommerce\ci4\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail...', Array, Array)
+#7 C:\laragon\www\ecommerce\ci4\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ecommerce\ci4\app\Controllers\Home.php(40): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(919): App\Controllers\Home->register()
+#10 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ecommerce\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ecommerce\ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 10:56:39 --> Table 'product.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\Home.php(40): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+ERROR - 2023-10-01 10:57:47 --> mysqli_sql_exception: Table 'products.user' doesn't exist in C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ecommerce\ci4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ecommerce\ci4\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail...', Array, Array)
+#7 C:\laragon\www\ecommerce\ci4\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ecommerce\ci4\app\Controllers\Home.php(40): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(919): App\Controllers\Home->register()
+#10 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ecommerce\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ecommerce\ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 10:57:47 --> Table 'products.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\Home.php(40): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+ERROR - 2023-10-01 10:58:33 --> mysqli_sql_exception: Table 'product.user' doesn't exist in C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ecommerce\ci4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ecommerce\ci4\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail...', Array, Array)
+#7 C:\laragon\www\ecommerce\ci4\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ecommerce\ci4\app\Controllers\Home.php(40): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(919): App\Controllers\Home->register()
+#10 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ecommerce\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ecommerce\ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 10:58:33 --> Table 'product.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\Home.php(40): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+ERROR - 2023-10-01 10:58:38 --> mysqli_sql_exception: Table 'product.user' doesn't exist in C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ecommerce\ci4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ecommerce\ci4\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail...', Array, Array)
+#7 C:\laragon\www\ecommerce\ci4\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ecommerce\ci4\app\Controllers\Home.php(40): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(919): App\Controllers\Home->register()
+#10 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ecommerce\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ecommerce\ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 10:58:38 --> Table 'product.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\Home.php(40): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+ERROR - 2023-10-01 11:05:15 --> mysqli_sql_exception: Table 'product.user' doesn't exist in C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ecommerce\ci4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ecommerce\ci4\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail...', Array, Array)
+#7 C:\laragon\www\ecommerce\ci4\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ecommerce\ci4\app\Controllers\Home.php(40): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(919): App\Controllers\Home->register()
+#10 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ecommerce\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ecommerce\ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 11:05:15 --> Table 'product.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\Home.php(40): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+CRITICAL - 2023-10-01 11:21:05 --> view(): Argument #2 ($data) must be of type array, null given, called in C:\laragon\www\ecommerce\ci4\app\Controllers\Home.php on line 82
+in SYSTEMPATH\Common.php on line 1176.
+ 1 APPPATH\Controllers\Home.php(82): view('signin', null)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->LoginAuth()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+ERROR - 2023-10-01 11:24:22 --> mysqli_sql_exception: Table 'product.user' doesn't exist in C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\ecommerce\ci4\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\ecommerce\ci4\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\ecommerce\ci4\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\ecommerce\ci4\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail...', 'email', Array, NULL, 'email')
+#6 C:\laragon\www\ecommerce\ci4\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail...', Array, Array)
+#7 C:\laragon\www\ecommerce\ci4\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\ecommerce\ci4\app\Controllers\Home.php(40): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(919): App\Controllers\Home->register()
+#10 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#11 C:\laragon\www\ecommerce\ci4\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\ecommerce\ci4\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\ecommerce\ci4\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-10-01 11:24:22 --> Table 'product.user' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `user`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('jlapasan1@gmail.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'jlapasan1@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\Home.php(40): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->register()
+ 8 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')

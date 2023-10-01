@@ -8,13 +8,15 @@ class Home extends BaseController
 {
     public function index()
     {
+        return view('signup');
+    }
+    public function home()
+    {
         return view('welcome_message');
     }
     public function shop(){
         $model = new EcommerceModel();
-        $data['products'] = $model->findAll();
-
-        
+        $data['products'] = $model->findAll();  
        return view('forshop', $data);
     }
     public function about(){
@@ -30,9 +32,11 @@ class Home extends BaseController
     public function register(){
         helper(['form']);
         $rules=[
-            'username' =>'required|min_lenght[4]|max_length[100]|valid_emails|is_unique[user.email]',
-            'password'=>'required|min_lenght[4]|max_length[50]',
+            'username' =>'required|min_length[4]|max_length[100]',
+            'email'=>'required|min_length[4]|max_length[100]|valid_email|is_unique[users.email]',
+            'password'=>'required|min_length[4]|max_length[50]',
             'confirmpassword' => 'matches[password]'];
+            
             if($this->validate($rules)){
                 $userModel = new UserModel();
                 $data=[
@@ -68,7 +72,7 @@ class Home extends BaseController
             'isLoggedin' => TRUE
             ];
             $session->set($ses_data); 
-            return redirect()->to('/profile');
+            return redirect()->to('/user');
             }else{
             $session->setFlashdata('msg', 'Password is incorrect.'); 
             return redirect()->to('/signin');

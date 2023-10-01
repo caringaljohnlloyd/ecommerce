@@ -30,13 +30,13 @@
             <div class="row">
                 <div class="col-lg-3 col-md-3">
                     <div class="header__logo">
-                        <a href="<?=base_url('/')?>"><img src="<?=base_url('img/logo.png')?>" alt=""></a>
+                        <a href="<?=base_url('/user')?>"><img src="<?=base_url('img/logo.png')?>" alt=""></a>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6">
                     <nav class="header__menu mobile-menu">
                         <ul>
-                        <li><a href="/">Home</a></li>
+                        <li><a href="/user">Home</a></li>
                             <li><a href="/shop">Shop</a></li>
                             <li  class="active"><a href="/about">About Us</a></li>
                             <li><a href="/blog">Blog</a></li>

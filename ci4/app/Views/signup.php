@@ -30,8 +30,8 @@
                     <div class="d-grid">
                         <button type="submit" class="btn btn-dark">Signup</button>
                     </div>
-                    <div class="mb-3">
-                        Already have an account? <a href="<?= base_url('signin') ?>">Signin</a>
+                    <div class="d-grid mb-3">
+                      Already have an account?  <a href="/login" class="btn btn-primary">Login</a>
                     </div>
                 </form>
             </div>

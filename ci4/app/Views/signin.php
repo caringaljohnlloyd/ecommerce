@@ -16,15 +16,16 @@
                         <?php endif; ?>
                         <form action="<?php echo base_url(); ?>signin" method="post">
                         <div class="form-group mb-3">
-                            <input type="email" name="email" placeholder="Email" value="<?= old('email') ?>" class="form-control">
+                            <input type="text" name="email" placeholder="Email" value="<?= old('email') ?>" class="form-control">
                         </div>
                         <div class="form-group mb-3">
                             <input type="password" name="password" placeholder="Password" class="form-control" > </div>
                             <div class="d-grid">
                                 <button type="submit" class="btn btn-success">Signin</button>
                             </div>
+                            <br>
                             <div class="mb-3">
-                        Don't have account? <a href="<?= base_url('signup') ?>">Signup</a>
+                            <a href="/signup" class="btn btn-primary">Create Account</a>
                     </div>
                 </form>
             </div>

@@ -40,6 +40,7 @@ class Home extends BaseController
                 $userModel = new UserModel();
                 $data=[
                     'username'=> $this->request->getVar('username'),
+                    'email'=> $this->request->getVar('email'),
                     'password'=> password_hash($this->request->getVar('password'),PASSWORD_DEFAULT)
                 ];
                 $userModel->save($data);
@@ -63,20 +64,24 @@ class Home extends BaseController
         
         public function LoginAuth(){
             $session = session();
-            $userModel = new UserModel(); $username = $this->request->getVar('username');
-            $password = $this->request->getVar('password');
+            $userModel = new UserModel();
+            $email = $this->request->getVar('email');
             
-            $data = $userModel->where('username', $username)->first();
+            $data = $userModel->where('email', $email)->first();
+
+            if ($data) {
+                $enteredpassword = $this->request->getVar('password');
             
-            if($data){
-            $pass = $data['password'];
-            $authenticatePassword = password_verify($password, $pass);
-            if($authenticatePassword){
-            $ses_data = [
-            'ID' => $data['ID'],
-            'username' => $data['username'],
-            'isLoggedin' => TRUE
-            ];
+                $hashedpass = $data['password'];
+            
+                if (password_verify($enteredpassword, $hashedpass)) {
+                    $ses_data = [
+                        'ID' => $data['email'],
+                        'isLoggedin' => TRUE,
+                        'userRole' => $data['role'],
+                        'username' => $data['username'],
+                    ];
+            $session->remove('validation_errors');
             $session->set($ses_data); 
             return redirect()->to('/sidebar');
             }else{

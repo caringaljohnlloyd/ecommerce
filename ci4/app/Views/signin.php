@@ -14,7 +14,7 @@
                             <?= session()->getFlashdata('msg') ?>
                         </div>
                         <?php endif; ?>
-                        <form action="<?php echo base_url(); ?>signin" method="post">
+                        <form action="<?php echo base_url(); ?>/signin" method="post">
                         <div class="form-group mb-3">
                             <input type="email" name="email" placeholder="Email" value="<?= old('email') ?>" class="form-control">
                         </div>

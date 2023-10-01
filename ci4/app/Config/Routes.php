@@ -10,6 +10,7 @@ $routes->get('/', 'Home::index');
 $routes->match(['get', 'post'], '/signup', 'Home::register');
 $routes->match(['get', 'post'], '/signin', 'Home::LoginAuth');
 
+
 $routes->get('/user', 'Home::home');
 
 $routes->get('/shop', 'Home::shop');

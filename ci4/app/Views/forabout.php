@@ -1,4 +1,4 @@
-<?= $this->include('about/user');?>
+<?= $this->include('shop/user');?>
 <header>
 <?= $this->include('about/nav');?>
 
@@ -8,6 +8,6 @@
 <?= $this->include('about/counter');?>
 <?= $this->include('about/client');?>
 
-<?= $this->include('about/footer');?>
-<?= $this->include('about/end');?>
+<?= $this->include('shop/footer');?>
+<?= $this->include('shop/end');?>
 </body>

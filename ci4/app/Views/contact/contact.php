@@ -35,9 +35,6 @@
         </div>
     </div>
     <!-- Offcanvas Menu End -->
-
-    
-
     <!-- Contact Section Begin -->
     <section class="contact spad">
         <div class="container">

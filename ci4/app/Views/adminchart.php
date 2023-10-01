@@ -1,4 +1,4 @@
-<head><?= $this->include('adminchart/head');?></head>
+<head><?= $this->include('admin/head');?></head>
 <body>
 <head><?= $this->include('adminchart/nav');?>
 <?= $this->include('adminchart/sidebar');?>
@@ -8,5 +8,5 @@
 
 
 </body>
-<footer><?= $this->include('adminchart/footer');?>
+<footer><?= $this->include('admin/footer');?>
 </footer>

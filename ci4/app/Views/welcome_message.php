@@ -1,4 +1,4 @@
-<?= $this->include('user/user');?>
+<?= $this->include('shop/user');?>
 <header>
 <?= $this->include('user/nav');?>
 
@@ -7,10 +7,10 @@
 <body>
 <?= $this->include('user/hero');?>
 <?= $this->include('user/banner');?>
-<?= $this->include('user/end');?>
+<?= $this->include('shop/end');?>
 
 </body>
-<?= $this->include('user/footer');?>
+<?= $this->include('shop/footer');?>
 
 
 

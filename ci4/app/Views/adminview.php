@@ -1,4 +1,4 @@
-<head><?= $this->include('admin/dashboard');?>
+<head><?= $this->include('admin/head');?>
 </head>
 <body>
 <head><?= $this->include('admin/nav');?>

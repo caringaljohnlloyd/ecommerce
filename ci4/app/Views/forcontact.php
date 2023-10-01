@@ -1,4 +1,4 @@
-<?= $this->include('contact/user');?>
+<?= $this->include('shop/user');?>
 <header><?= $this->include('contact/nav');?></header>
 
 <body>
@@ -6,7 +6,7 @@
 <?= $this->include('contact/contact');?>
 
 
-<?= $this->include('contact/end');?>
-<?= $this->include('contact/footer');?>
+<?= $this->include('shop/end');?>
+<?= $this->include('shop/footer');?>
 
 </body>

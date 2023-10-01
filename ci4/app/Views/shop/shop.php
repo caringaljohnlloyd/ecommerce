@@ -108,10 +108,7 @@
                                         </div>
                                     </div>
                                 </div>
-
-
-
-                                
+           
                             </div>
                         </div>
                     </div>
@@ -136,19 +133,46 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="row">
     <?php foreach ($products as $product): ?>
-        <div class="col-lg-4 col-md-6 col-sm-6">
-            <div class="product__item">
-            <div class="product__item__pic set-bg" data-setbg="<?= base_url($product['Image']) ?>">                    
-                    <h6><?= $product['ProductName'] ?></h6>
-                    <p><?= $product['ProductDescription'] ?></p>
-                    <p>Category: <?= $product['ProductCategory'] ?></p>
-                    <p>Quantity: <?= $product['ProductQuantity'] ?></p>
-                    <h5>$<?= $product['ProductPrice'] ?></h5>
-                </div>                              
+    <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="modal fade" id="productModal<?= $product['ID'] ?>" tabindex="-1" role="dialog" aria-labelledby="productModalLabel<?= $product['ID'] ?>" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="productModalLabel<?= $product['ID'] ?>">Product Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h6 id="modalProductName<?= $product['ID'] ?>"><strong><?= $product['ProductName'] ?></strong></h6>
+                        <br>
+                        <p><strong>Category: </strong><?= $product['ProductCategory'] ?></p>
+                        <p><strong>Quantity: </strong> <?= $product['ProductQuantity'] ?></p>
+                        <p><strong>Description:</strong>  <?= $product['ProductDescription'] ?></p>
+                        <p><strong>Price:</strong>  <?= $product['ProductPrice'] ?></p>
+                        <div class="modal-buttons">
+                            <button type="button" class="btn btn-primary" id="addToCartButton<?= $product['ID'] ?>">Add to Cart</button>
+                            <button type="button" class="btn btn-success" id="buyNowButton<?= $product['ID'] ?>">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="product__item">
+            <div class="product__item__pic set-bg" data-toggle="modal" data-target="#productModal<?= $product['ID'] ?>"
+                data-setbg="<?= base_url($product['image']) ?>" 
+                data-name="<?= $product['ProductName'] ?>" 
+                data-description="<?= $product['ProductDescription'] ?>"
+                data-category="<?= $product['ProductCategory'] ?>" 
+                data-quantity="<?= $product['ProductQuantity'] ?>" 
+                data-price="<?= $product['ProductPrice'] ?>">                
+            </div>
+        </div>
+    </div>
     <?php endforeach; ?>
 </div>
                     <div class="row">
@@ -168,8 +192,6 @@
     </section>
     <!-- Shop Section End -->
 
-
-
     <!-- Search Begin -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
@@ -181,7 +203,24 @@
     </div>
     <!-- Search End -->
 
+<script>
+    $(document).ready(function() {
+        $('.product__item__pic').on('click', function() {
+            var image = $(this).data('image');
+            var name = $(this).data('name');
+            var description = $(this).data('description');
+            var category = $(this).data('category');
+            var quantity = $(this).data('quantity');
+            var price = $(this).data('price');
 
+            $('#productModal .modal-body #modalProductName').text(name);
+            $('#productModal .modal-body #modalProductDescription').text(description);
+            $('#productModal .modal-body #modalProductCategory').text(category);
+            $('#productModal .modal-body #modalProductQuantity').text(quantity);
+            $('#productModal .modal-body #modalProductPrice').text('$' + price);
+            $('#productModal .modal-body .set-bg').css('background-image', 'url(' + image + ')');
+        });
+    });
+</script>
 </body>
-
 </html>

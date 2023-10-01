@@ -13,9 +13,15 @@ $routes->get('/contact', 'Home::contact');
 
 $routes->get('/admin', 'AdminController::admin');
 $routes->get('/sidebar', 'AdminController::admin');
-$routes->get('adminchart/chart', 'AdminController::adminch');
+$routes->get('/adminchart/chart', 'AdminController::adminch');
+$routes->get('/admintable/table', 'AdminController::admintab');
 
 
+$routes->get('/admininventory/inventory', 'AdminController::inventory');
+
+$routes->post('/admininventory/add', 'AdminController::add');
+$routes->post('/admininventory/update/(:num)', 'AdminController::edit/$1');
+$routes->get('/admininventory/delete/(:num)', 'AdminController::delete/$1');
 
 
 

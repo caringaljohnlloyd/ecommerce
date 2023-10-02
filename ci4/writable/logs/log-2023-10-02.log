@@ -1,0 +1,34 @@
+CRITICAL - 2023-10-02 04:42:09 --> Object of type CodeIgniter\Session\Session is not callable
+in APPPATH\Filters\AuthGuard.php on line 29.
+ 1 SYSTEMPATH\Filters\Filters.php(182): App\Filters\AuthGuard->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+CRITICAL - 2023-10-02 04:42:48 --> syntax error, unexpected token "public"
+in APPPATH\Filters\AuthGuard.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\ecommerce\\ci4\\app\\Filters\\AuthGuard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Filters\\AuthGuard')
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Filters\\AuthGuard')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+CRITICAL - 2023-10-02 04:42:49 --> syntax error, unexpected token "public"
+in APPPATH\Filters\AuthGuard.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\ecommerce\\ci4\\app\\Filters\\AuthGuard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Filters\\AuthGuard')
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Filters\\AuthGuard')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+CRITICAL - 2023-10-02 04:42:49 --> syntax error, unexpected token "public"
+in APPPATH\Filters\AuthGuard.php on line 48.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\laragon\\www\\ecommerce\\ci4\\app\\Filters\\AuthGuard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Filters\\AuthGuard')
+ 3 SYSTEMPATH\Filters\Filters.php(173): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Filters\\AuthGuard')
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->run('', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')

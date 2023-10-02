@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> <title>Codeigniter Login with Email/Password Example</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"> <title>Codeigniter Login with Email/Password Example</title>
     </head>
     <body>
         <div class="container">
@@ -16,17 +17,18 @@
                         <?php endif; ?>
                         <form action="<?php echo base_url(); ?>signin" method="post">
                         <div class="form-group mb-3">
-                            <input type="text" name="email" placeholder="Email" value="<?= old('email') ?>" class="form-control">
+                            <input type="email" name="email" placeholder="Email" value="<?= set_value('email') ?>" class="form-control">
                         </div>
                         <div class="form-group mb-3">
                             <input type="password" name="password" placeholder="Password" class="form-control" > </div>
-                            <div class="d-grid">
-                                <button type="submit" class="btn btn-success">Signin</button>
                             </div>
-                            <br>
-                            <div class="mb-3">
-                                <a href="/signup" class="btn btn-primary">Create Account</a>
-                            </div>
+                            <div class="d-grid mb-3">
+                        <button type="submit" class="btn btn-dark">Signin</button>
+                    </div>
+                    <div class="d-grid mb-3">
+                        <a href="/signup" class="btn btn-primary">Create Account</a>
+                    </div>
+
                         </form>
                     </div>
                 </div>

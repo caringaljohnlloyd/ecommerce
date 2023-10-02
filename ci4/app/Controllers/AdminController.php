@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 use App\Models\EcommerceModel;
+use App\Models\UserModel;
 
 class AdminController extends BaseController
 {

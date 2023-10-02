@@ -87,17 +87,17 @@ class Home extends BaseController
                         return redirect()->to(base_url('/sidebar'));
                     }
                     else{
-                        return redirect()->to('/');
+                        return redirect()->to(base_url('/'));
                     }
                 }
                 else{
                     $session->setFlashdata('msg', 'Password is incorrect.'); 
-                    return redirect()->to('/login');
+                    return redirect()->to(base_url('/login'));
                 } 
             }
             else{
                 $session->setFlashdata('msg', 'Email does not exist.');
-                return redirect()->to('/login');
+                return redirect()->to(base_url('/login'));
             }
         }
     }

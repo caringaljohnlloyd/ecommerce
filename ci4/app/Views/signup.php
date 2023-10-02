@@ -14,12 +14,12 @@
                         <div class="alert alert-warning"> <?= $validation->listErrors() ?>
                     </div>
                     <?php endif; ?>
-                    <form action="<?php echo base_url(); ?>signup" method="post"> <div class="form-group mb-3">
+                    <form action="<?php echo base_url(); ?>signup" method="post"> 
                     <div class="form-group mb-3">
-                        <input type="text" name="username" placeholder="Name" value="<?= old('username') ?>" class="form-control">
+                        <input type="text" name="username" placeholder="Name" value="<?= set_value('username') ?>" class="form-control">
                     </div>
                     <div class="form-group mb-3">
-                        <input type="email" name="email" placeholder="Email" value="<?= old('email') ?>" class="form-control">
+                        <input type="email" name="email" placeholder="Email" value="<?= set_value('email') ?>" class="form-control">
                     </div>
                     <div class="form-group mb-3">
                         <input type="password" name="password" placeholder="Password" class="form-control">
@@ -27,11 +27,11 @@
                     <div class="form-group mb-3">
                         <input type="password" name="confirmpassword" placeholder="Confirm Password" class="form-control">
                     </div>
-                    <div class="d-grid">
+                    <div class="d-grid mb-3">
                         <button type="submit" class="btn btn-dark">Signup</button>
                     </div>
                     <div class="d-grid mb-3">
-                      Already have an account?  <a href="/login" class="btn btn-primary">Login</a>
+                        <a href="/signin" class="btn btn-primary">Login</a>
                     </div>
                 </form>
             </div>

@@ -25,11 +25,11 @@
                             </div>
                             <br>
                             <div class="mb-3">
-                            <a href="/signup" class="btn btn-primary">Create Account</a>
+                                <a href="/signup" class="btn btn-primary">Create Account</a>
+                            </div>
+                        </form>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-    </div>
-</body>
-</html>
+        </body>
+    </html>

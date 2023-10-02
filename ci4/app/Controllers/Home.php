@@ -81,16 +81,23 @@ class Home extends BaseController
                         'userRole' => $data['role'],
                         'username' => $data['username'],
                     ];
-            $session->remove('validation_errors');
-            $session->set($ses_data); 
-            return redirect()->to('/sidebar');
-            }else{
-            $session->setFlashdata('msg', 'Password is incorrect.'); 
-            return redirect()->to('/login');
-            } 
-            }else{
-            $session->setFlashdata('msg', 'Email does not exist.');
-            return redirect()->to('/login');
+                    $session->remove('validation_errors');
+                    $session->set($ses_data);
+                    if ($data['role']==='admin'){
+                        return redirect()->to(base_url('/sidebar'));
+                    }
+                    else{
+                        return redirect()->to('/');
+                    }
+                }
+                else{
+                    $session->setFlashdata('msg', 'Password is incorrect.'); 
+                    return redirect()->to('/login');
+                } 
             }
+            else{
+                $session->setFlashdata('msg', 'Email does not exist.');
+                return redirect()->to('/login');
+            }
+        }
     }
-}

@@ -9,7 +9,7 @@
         <div class="container">
             <div class="row justify-content-md-center">
                 <div class="col-5">
-                    <h2>Login in</h2>
+                    <h2>Login</h2>
                     <?php if(session()->getFlashdata('msg')): ?>
                         <div class="alert alert-warning">
                             <?= session()->getFlashdata('msg') ?>

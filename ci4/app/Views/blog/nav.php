@@ -13,9 +13,8 @@
                     </div>
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
-                            <div class="header__top__links">
-                        
-                                <a href="#">FAQs</a>
+                        <div class="header__top__links">
+                            <a href="/logout">LOG OUT</a>
                             </div>
                             <div class="header__top__hover">
                                 <span>Usd <i class="arrow_carrot-down"></i></span>

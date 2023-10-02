@@ -32,3 +32,33 @@ in APPPATH\Filters\AuthGuard.php on line 48.
  5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+CRITICAL - 2023-10-02 05:30:14 --> Invalid file: "/.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/', [], true)
+ 3 APPPATH\Controllers\Home.php(90): view('/')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->LoginAuth()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+CRITICAL - 2023-10-02 05:30:31 --> Invalid file: "user.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('user.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('user', [], true)
+ 3 APPPATH\Controllers\Home.php(90): view('user')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->LoginAuth()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')
+CRITICAL - 2023-10-02 05:30:52 --> Invalid file: "/user.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('/user.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('/user', [], true)
+ 3 APPPATH\Controllers\Home.php(90): view('/user')
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->LoginAuth()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\ecommerce\\ci4\\public\\index.php')

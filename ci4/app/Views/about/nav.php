@@ -10,8 +10,7 @@
                     <div class="col-lg-6 col-md-5">
                         <div class="header__top__right">
                             <div class="header__top__links">
-                       
-                                <a href="#">FAQs</a>
+                            <a href="/logout">LOG OUT</a>
                             </div>
                             <div class="header__top__hover">
                                 <span>Usd <i class="arrow_carrot-down"></i></span>
@@ -41,6 +40,7 @@
                             <li  class="active"><a href="/about">About Us</a></li>
                             <li><a href="/blog">Blog</a></li>
                             <li><a href="/contact">Contacts</a></li>
+                            
                         </ul>
                             
                     </nav>
@@ -48,6 +48,7 @@
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
                         <a href="#" class="search-switch"><img src="<?=base_url('')?>img/icon/search.png" alt=""></a>
+                        
                         <a href="#"><img src=" <?=base_url('img/icon/heart.png')?>" alt=""></a>
                         <a href="#"><img src="<?=base_url('img/icon/cart.png')?>" alt=""> <span>0</span></a>
                         <div class="price">$0.00</div>

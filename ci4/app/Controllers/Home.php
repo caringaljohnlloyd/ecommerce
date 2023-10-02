@@ -8,7 +8,7 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('signup');
+        return view('welcome_message');
     }
     public function home()
     {
@@ -44,7 +44,7 @@ class Home extends BaseController
                     'password'=> password_hash($this->request->getVar('password'),PASSWORD_DEFAULT)
                 ];
                 $userModel->save($data);
-                return redirect()->to('/login');
+                return redirect()->to(base_url('/login'));
             }
             else{
                 $data['validation']= $this->validator;
@@ -62,42 +62,40 @@ class Home extends BaseController
              return redirect()->to(base_url('/login'));
          }
         
-        public function LoginAuth(){
-            $session = session();
-            $userModel = new UserModel();
-            $email = $this->request->getVar('email');
-            
-            $data = $userModel->where('email', $email)->first();
-
-            if ($data) {
-                $enteredpassword = $this->request->getVar('password');
-            
-                $hashedpass = $data['password'];
-            
-                if (password_verify($enteredpassword, $hashedpass)) {
-                    $ses_data = [
-                        'ID' => $data['email'],
-                        'isLoggedin' => TRUE,
-                        'userRole' => $data['role'],
-                        'username' => $data['username'],
-                    ];
-                    $session->remove('validation_errors');
-                    $session->set($ses_data);
-                    if ($data['role']==='admin'){
-                        return redirect()->to(base_url('/sidebar'));
-                    }
-                    else{
-                        return redirect()->to(base_url('/'));
-                    }
-                }
-                else{
-                    $session->setFlashdata('msg', 'Password is incorrect.'); 
-                    return redirect()->to(base_url('/login'));
-                } 
-            }
-            else{
-                $session->setFlashdata('msg', 'Email does not exist.');
-                return redirect()->to(base_url('/login'));
-            }
-        }
+         public function LoginAuth()
+         {
+             $session = session();
+             $userModel = new UserModel();
+             $email = $this->request->getVar('email');
+         
+             $data = $userModel->where('email', $email)->first();
+         
+             if ($data) {
+                 $enteredPassword = $this->request->getVar('password');
+                 $hashedPassword = $data['password'];
+         
+                 if (password_verify($enteredPassword, $hashedPassword)) {
+                     $ses_data = [
+                         'id' => $data['email'],
+                         'isLoggedIn' => true,
+                         'userRole' => $data['role'],
+                         'username' => $data['username'],
+                     ];
+                     $session->remove('validation_errors');
+         
+                     $session->set($ses_data);
+                     if ($data['role'] === 'admin') {
+                         return redirect()->to(base_url('/sidebar'));
+                     } else {
+                         return redirect()->to(base_url('/user'));
+                     }
+                 } else {
+                     $session->setFlashdata('msg', 'Password is incorrect.');
+                     return redirect()->to(base_url('/login'));
+                 }
+             } else {
+                 $session->setFlashdata('msg', 'Email does not exist.');
+                 return redirect()->to(base_url('/login'));
+             }
+         }
     }

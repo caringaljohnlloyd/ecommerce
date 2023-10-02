@@ -61,7 +61,7 @@ class AdminController extends BaseController
 
         $this->model->insert($data);
 
-        return redirect()->to('/admininventory/inventory');
+        return redirect()->to(base_url('/admininventory/inventory'));
     }
 
     public function edit($id)
@@ -69,7 +69,7 @@ class AdminController extends BaseController
     $product = $this->model->find($id);
 
     if (!$product) {
-        return redirect()->to('/admininventory/inventory')->with('error', 'Product not found');
+        return redirect()->to(base_url('/admininventory/inventory'))->with('error', 'Product not found');
     }
     $file = $this->request->getFile('image');
     $product_name = $this->request->getPost('ProductName');
@@ -93,7 +93,7 @@ class AdminController extends BaseController
     // Update the product with the new data
     $this->model->update($id, $data);
 
-    return redirect()->to('/admininventory/inventory')->with('success', 'Product updated successfully');
+    return redirect()->to(base_url('/admininventory/inventory'))->with('success', 'Product updated successfully');
 }
 
 
@@ -103,6 +103,6 @@ class AdminController extends BaseController
         $data = [
             'model' => $this->model->findAll(),
         ];
-        return redirect()->to('/admininventory/inventory');
+        return redirect()->to(base_url('/admininventory/inventory'));
     }
 }

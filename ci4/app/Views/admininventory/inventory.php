@@ -40,8 +40,16 @@
                 <td><?= $product['ProductQuantity'] ?></td>
                 <td><?= $product['ProductPrice'] ?></td>
                 <td>
-                    <a a href="delete/<?= $product['ID'] ?>" class="btn btn-danger btn-sm">Delete</a>
-                   <a href="#updateModal<?=$product['ID']?>" class="btn btn-primary btn-sm .update" data-toggle="modal">Update</a>
+                    <a href="delete/<?= $product['ID'] ?>" class="btn btn-danger btn-sm">Delete</a>
+                    <a href="#" class="btn btn-primary btn-sm edit-button" data-toggle="modal" 
+       data-target="#updateModal<?=$product['ID']?>"
+       data-id="<?= $product['ID'] ?>"
+       data-image="<?= $product['image'] ?>"
+       data-productname="<?= $product['ProductName'] ?>"
+       data-productdescription="<?= $product['ProductDescription'] ?>"
+       data-productcategory="<?= $product['ProductCategory'] ?>"
+       data-productquantity="<?= $product['ProductQuantity'] ?>"
+       data-productprice="<?= $product['ProductPrice'] ?>">Update</a>
                 </td>
             </tr>
             <?php endforeach; ?>
@@ -93,8 +101,8 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="updateModal<?=$product['ID']?>" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel<?=$product['ID']?>" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" id="updateModal<?=$product['ID']?>" tabindex="-1" aria-labelledby="updateModalLabel<?=$product['ID']?>" aria-hidden="true">
+    <div class="modal-dialog" >
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="updateModalLabel<?=$product['ID']?>">Update Product</h5>
@@ -139,24 +147,26 @@
     </div>
 </div>
 <script>
-    $(document).ready(function() {
-      $('.update').on('click', function() {
+   $(document).ready(function() {
+    $('.edit-button').on('click', function() {
         var ID = $(this).data('ID');
-        var Image = $(this).data('Image');
-        var ProductName = $(this).data('ProductName');
-        var ProductDescription = $(this).data('ProductDescription');
-        var ProductCategory = $(this).data('ProductCategory');
-        var ProductQuantity = $(this).data('ProductQuantity');
-        var ProductPrice = $(this).data('ProductPrice');
+        var Image = $(this).data('image');
+        var ProductName = $(this).data('productname');
+        var ProductDescription = $(this).data('productdescription');
+        var ProductCategory = $(this).data('productcategory');
+        var ProductQuantity = $(this).data('productquantity');
+        var ProductPrice = $(this).data('productprice');
 
         $('#eproduct_id').val(ID);
-        $('#ename').val(ProductName);
-        $('#edescription').val(ProductDescription);
-        $('#ecategory').val(ProductCategory);
-        $('#equantity').val(ProductQuantity);
-        $('#eprice').val(ProductPrice);
-      });
+        $('#image').val(Image);
+        $('#ProductName').val(ProductName);
+        $('#ProductDescription').val(ProductDescription);
+        $('#ProductCategory').val(ProductCategory);
+        $('#ProductQuantity').val(ProductQuantity);
+        $('#ProductPrice').val(ProductPrice);
     });
+});
+
   </script>
 </body>
 </html>

@@ -20,8 +20,8 @@
       <!-- partial:partials/_navbar.html -->
       <nav class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
         <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center">
-          <a class="navbar-brand brand-logo" href="/sidebar"><img src="assets/images/logo.svg" alt="logo" /></a>
-          <a class="navbar-brand brand-logo-mini" href="/sidebar"><img src="assets/images/logo-mini.svg" alt="logo" /></a>
+          <a class="navbar-brand brand-logo" href="/sidebar"><img src="\logo.png" alt="logo" /></a>
+          <a class="navbar-brand brand-logo-mini" href="/sidebar"><img src="\logo.png" alt="logo" /></a>
         </div>
         <div class="navbar-menu-wrapper d-flex align-items-stretch">
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -41,7 +41,7 @@
             <li class="nav-item nav-profile dropdown">
               <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
                 <div class="nav-profile-img">
-                  <img src="assets/images/faces/face1.jpg" alt="image">
+                  <img src="\IMG_20220302_083334.jpg" alt="image">
                   <span class="availability-status online"></span>
                 </div>
                 <div class="nav-profile-text">

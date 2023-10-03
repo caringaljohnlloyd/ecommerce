@@ -101,6 +101,7 @@
         </div>
     </div>
 </div>
+
 <div class="modal fade" id="updateModal<?=$product['ID']?>" tabindex="-1" aria-labelledby="updateModalLabel<?=$product['ID']?>" aria-hidden="true">
     <div class="modal-dialog" >
         <div class="modal-content">
@@ -147,26 +148,25 @@
     </div>
 </div>
 <script>
-   $(document).ready(function() {
-    $('.edit-button').on('click', function() {
-        var ID = $(this).data('ID');
-        var Image = $(this).data('image');
-        var ProductName = $(this).data('productname');
-        var ProductDescription = $(this).data('productdescription');
-        var ProductCategory = $(this).data('productcategory');
-        var ProductQuantity = $(this).data('productquantity');
-        var ProductPrice = $(this).data('productprice');
+    $(document).ready(function () {
+        $('.edit-button').on('click', function () {
+            var ID = $(this).data('id');
+            var Image = $(this).data('image');
+            var ProductName = $(this).data('productname');
+            var ProductDescription = $(this).data('productdescription');
+            var ProductCategory = $(this).data('productcategory');
+            var ProductQuantity = $(this).data('productquantity');
+            var ProductPrice = $(this).data('productprice');
 
-        $('#eproduct_id').val(ID);
-        $('#image').val(Image);
-        $('#ProductName').val(ProductName);
-        $('#ProductDescription').val(ProductDescription);
-        $('#ProductCategory').val(ProductCategory);
-        $('#ProductQuantity').val(ProductQuantity);
-        $('#ProductPrice').val(ProductPrice);
+            $('#image' + ID).val(Image);
+            $('#ProductName' + ID).val(ProductName);
+            $('#ProductDescription' + ID).val(ProductDescription);
+            $('#ProductCategory' + ID).val(ProductCategory);
+            $('#ProductQuantity' + ID).val(ProductQuantity);
+            $('#ProductPrice' + ID).val(ProductPrice);
+        });
     });
-});
+</script>
 
-  </script>
 </body>
 </html>

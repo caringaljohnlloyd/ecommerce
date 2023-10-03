@@ -78,17 +78,15 @@ class Home extends BaseController
                      $ses_data = [
                          'id' => $data['email'],
                          'isLoggedIn' => true,
-                         'userRole' => $data['role'],
+                        
                          'username' => $data['username'],
                      ];
                      $session->remove('validation_errors');
          
                      $session->set($ses_data);
-                     if ($data['role'] === 'admin') {
+                    
                          return redirect()->to(base_url('/sidebar'));
-                     } else {
-                         return redirect()->to(base_url('/user'));
-                     }
+                    
                  } else {
                      $session->setFlashdata('msg', 'Password is incorrect.');
                      return redirect()->to(base_url('/login'));

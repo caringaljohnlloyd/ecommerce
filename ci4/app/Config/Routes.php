@@ -5,16 +5,16 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index',['filter'=>'authGuard']);
+$routes->get('/', 'Home::index');
 $routes->match(['get', 'post'], '/signup', 'Home::register');
 $routes->post('/signin', 'Home::LoginAuth');
 
 
-$routes->get('/user', 'Home::home',['filter'=>'authGuard']);
-$routes->get('/shop', 'Home::shop',['filter'=>'authGuard']);
-$routes->get('/about', 'Home::about',['filter'=>'authGuard']);
-$routes->get('/blog', 'Home::blog',['filter'=>'authGuard']);
-$routes->get('/contact', 'Home::contact',['filter'=>'authGuard']);
+$routes->get('/user', 'Home::home');
+$routes->get('/shop', 'Home::shop');
+$routes->get('/about', 'Home::about');
+$routes->get('/blog', 'Home::blog');
+$routes->get('/contact', 'Home::contact');
 
 $routes->get('/sidebar', 'AdminController::admin',['filter'=>'authGuard']);
 $routes->get('/adminchart/chart', 'AdminController::adminch',['filter'=>'authGuard']);

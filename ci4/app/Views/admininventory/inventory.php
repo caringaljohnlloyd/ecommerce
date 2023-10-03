@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="container">
-    <button type="button" class="btn btn-success mt-3" data-toggle="modal" data-target="#addModal">
+    <button type="button" class="btn btn-success mt-3 .update" data-toggle="modal" data-target="#addModal">
         Add
     </button>  
 <div class="table-responsive">
@@ -40,10 +40,8 @@
                 <td><?= $product['ProductQuantity'] ?></td>
                 <td><?= $product['ProductPrice'] ?></td>
                 <td>
-                    <a href="delete/<?= $product['ID'] ?>" class="btn btn-danger btn-sm">Delete</a>
-                    <button type="button" class="btn btn-primary btn-sm" 
-                    data-toggle="modal" 
-                    data-target="#updateModal<?=$product['ID']?>">Update</button>
+                    <a a href="delete/<?= $product['ID'] ?>" class="btn btn-danger btn-sm">Delete</a>
+                   <a href="#updateModal<?=$product['ID']?>" class="btn btn-primary btn-sm .update" data-toggle="modal">Update</a>
                 </td>
             </tr>
             <?php endforeach; ?>
@@ -140,5 +138,25 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+      $('.update').on('click', function() {
+        var ID = $(this).data('ID');
+        var Image = $(this).data('Image');
+        var ProductName = $(this).data('ProductName');
+        var ProductDescription = $(this).data('ProductDescription');
+        var ProductCategory = $(this).data('ProductCategory');
+        var ProductQuantity = $(this).data('ProductQuantity');
+        var ProductPrice = $(this).data('ProductPrice');
+
+        $('#eproduct_id').val(ID);
+        $('#ename').val(ProductName);
+        $('#edescription').val(ProductDescription);
+        $('#ecategory').val(ProductCategory);
+        $('#equantity').val(ProductQuantity);
+        $('#eprice').val(ProductPrice);
+      });
+    });
+  </script>
 </body>
 </html>

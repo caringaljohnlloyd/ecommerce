@@ -90,7 +90,6 @@ class AdminController extends BaseController
             'ProductPrice' => $product_price,
     ];
 
-    // Update the product with the new data
     $this->model->update($id, $data);
 
     return redirect()->to(base_url('/admininventory/inventory'))->with('success', 'Product updated successfully');
